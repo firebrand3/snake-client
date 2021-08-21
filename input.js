@@ -1,16 +1,14 @@
-const net = require("net");
-const { connect } = require("./client");
-
 let connection;
 
-const setupInput = function (conn) {
+//function to manage user input
+const setupInput = function(conn) {
   connection = conn;
   const stdin = process.stdin;
   stdin.setRawMode(true);
   stdin.setEncoding("utf8");
   stdin.resume();
-
-  const handleUserInput = function (key) {
+  //nested function to define input behaviour
+  const handleUserInput = function(key) {
     if (key === "\u0003") {
       process.exit();
     }
@@ -27,17 +25,17 @@ const setupInput = function (conn) {
       connection.write("Move: down");
     }
     if (key === "z") {
-      connection.write("Say: fun fun fun")
+      connection.write("Say: fun fun fun");
     }
     if (key === "x") {
-      connection.write("Say: feed me...")
+      connection.write("Say: feed me...");
     }
-    }
-
-    stdin.on("data", (key) => {
-      handleUserInput(key);
-    });
-    return stdin;
   };
+
+  stdin.on("data", (key) => {
+    handleUserInput(key);
+  });
+  return stdin;
+};
 
 module.exports = { setupInput };
