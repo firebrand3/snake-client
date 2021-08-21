@@ -26,11 +26,18 @@ const setupInput = function (conn) {
     if (key === "s") {
       connection.write("Move: down");
     }
+    if (key === "z") {
+      connection.write("Say: fun fun fun")
+    }
+    if (key === "x") {
+      connection.write("Say: feed me...")
+    }
+    }
+
+    stdin.on("data", (key) => {
+      handleUserInput(key);
+    });
+    return stdin;
   };
-  stdin.on("data", (key) => {
-    handleUserInput(key);
-  });
-  return stdin;
-};
 
 module.exports = { setupInput };
