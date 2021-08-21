@@ -11,7 +11,7 @@ Before you can run this client, you will need to be running the server side whic
 !["screenshot description"](#)
 ![](images/snakes1.png)
 !["screenshot description"](#)
-
+![](images/snakes2.png)
 
 ## Getting Started
 
