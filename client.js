@@ -29,11 +29,7 @@ const connect = function() {
 //   });
 
   
-  conn.on('connect', (data) => {
-    console.log("Successfully connected to game server");
-  });
- 
-  conn.on('data', (data) => {
+ conn.on('data', (data) => {
     console.log("you ded cuz you idled");
   });
 
