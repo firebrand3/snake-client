@@ -8,9 +8,9 @@ Before you can run this client, you will need to be running the server side whic
 
 ## Final Product
 
-!["screenshot description"](#)
+!["send cutoms messages"](#)
 ![](images/snakes1.png)
-!["screenshot description"](#)
+!["display player name"](#)
 ![](images/snakes2.png)
 
 ## Getting Started
